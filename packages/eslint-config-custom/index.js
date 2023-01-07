@@ -4,7 +4,6 @@ module.exports = {
   rules: {
     "no-console": 2,
     "simple-import-sort/imports": "error",
-    "no-unused-vars": "error",
     "unused-imports/no-unused-imports": "error",
     "@next/next/no-html-link-for-pages": "off",
     "react/jsx-key": "off",

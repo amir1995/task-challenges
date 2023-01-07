@@ -4,5 +4,8 @@ module.exports = {
     locales: ['default', 'fa', 'en'],
     localeDetection: false,
   },
+  fallbackLng: {
+    default: ['fa'],
+  },
   defaultNS: 'fa'
 }

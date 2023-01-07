@@ -14,7 +14,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "@/*": ["./*"],
+      "@/utils/*": ["utils/*"],
+      "@/types/*": ["types/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/styles/*": ["styles/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

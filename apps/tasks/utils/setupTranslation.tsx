@@ -1,7 +1,7 @@
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
-import {ISetupLocale} from "../@types/interface/functionResult";
-import {Locale} from "../@types/types/staticProps";
+import {ISetupLocale} from "@/types/interface/functionResult";
+import {Locale} from "@/types/types/staticProps";
 
 export const setupTranslation = async (props: Locale): Promise<ISetupLocale> => {
   const {
