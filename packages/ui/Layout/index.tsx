@@ -1,16 +1,16 @@
-import classNames from 'classnames'
-import React from 'react'
+import classNames from 'classnames';
+import React from 'react';
 
-import Header from './Header'
+import Header from './Header';
 
 type LayoutProps = {
-  className?: string
-  children?: React.ReactNode
-}
+  className?: string;
+  children?: React.ReactNode;
+};
 
 export const Layout = ({ children, className = '' }: LayoutProps) => {
   return (
-    <div className="w-full h-full">
+    <div className="h-full w-full">
       <Header />
       <div
         role="main"
@@ -20,5 +20,5 @@ export const Layout = ({ children, className = '' }: LayoutProps) => {
         {children}
       </div>
     </div>
-  )
-}
+  );
+};

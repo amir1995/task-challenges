@@ -1,7 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import { Card, CoinCard, Title } from 'ui';
+import { useTranslation } from 'next-i18next';
+import {Card} from "ui";
 import { Layout } from 'ui/Layout';
 import LayoutContainer from 'ui/Layout/LayoutContainer';
 
@@ -12,7 +13,10 @@ import { setupTranslation } from '@/utils/setupTranslation';
 interface IPageProps extends ISetupLocale {}
 
 const Index: NextPage<IPageProps> = (props: IPageProps) => {
-  const { data } = useQuery(['coinList'], () => coinList());
+  const { locale } = props;
+  const { t } = useTranslation(locale);
+
+  const { isLoading, isError, isSuccess, data } = useQuery(['coinList'], () => coinList());
 
   return (
     <Layout>
@@ -20,16 +24,7 @@ const Index: NextPage<IPageProps> = (props: IPageProps) => {
         <title>Coin Market</title>
       </Head>
       <LayoutContainer>
-        <Card className="">
-          <Title title="Coins" titleSize="text-2.5xl" />
-          <div className="align-center flex flex-wrap justify-start pt-4">
-            {data && data.length
-              ? data.map(p => {
-                  return <CoinCard coinName={p.toUpperCase()} />;
-                })
-              : null}
-          </div>
-        </Card>
+        <Card><div className="pl-3 font-light text-neutral-035 text-base">inja coine</div></Card>
       </LayoutContainer>
     </Layout>
   );

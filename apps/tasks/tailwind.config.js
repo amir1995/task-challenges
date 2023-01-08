@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require("tailwindcss/colors");
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: [
@@ -140,6 +140,7 @@ module.exports = {
       11: '44px',
       12: '48px',
       12.5: '50px',
+      12.7: '51px',
       13: '52px',
       14: '56px',
       15: '60px',
@@ -205,11 +206,13 @@ module.exports = {
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
     },
-    backgroundColor: (theme) => theme('colors'),
+    backgroundColor: theme => theme('colors'),
     backgroundImage: {
       none: 'none',
-      'hero-overlay': 'linear-gradient(     to bottom,     hsla(0, 0%, 0%, 0) 0%,     hsla(0, 0%, 0%, 0.005) 8.1%,     hsla(0, 0%, 0%, 0.019) 15.5%,     hsla(0, 0%, 0%, 0.042) 22.5%,     hsla(0, 0%, 0%, 0.07) 29%,     hsla(0, 0%, 0%, 0.104) 35.3%,     hsla(0, 0%, 0%, 0.141) 41.2%,     hsla(0, 0%, 0%, 0.18) 47.1%,     hsla(0, 0%, 0%, 0.22) 52.9%,     hsla(0, 0%, 0%, 0.259) 58.8%,     hsla(0, 0%, 0%, 0.296) 64.7%,     hsla(0, 0%, 0%, 0.33) 71%,     hsla(0, 0%, 0%, 0.358) 77.5%,     hsla(0, 0%, 0%, 0.381) 84.5%,     hsla(0, 0%, 0%, 0.395) 91.9%,     hsla(0, 0%, 0%, 0.4) 100%   );',
-      'hero-overlay-top': 'linear-gradient(     to top,     hsla(0, 0%, 0%, 0) 0%,     hsla(0, 0%, 0%, 0.005) 8.1%,     hsla(0, 0%, 0%, 0.019) 15.5%,     hsla(0, 0%, 0%, 0.042) 22.5%,     hsla(0, 0%, 0%, 0.07) 29%,     hsla(0, 0%, 0%, 0.104) 35.3%,     hsla(0, 0%, 0%, 0.141) 41.2%,     hsla(0, 0%, 0%, 0.18) 47.1%,     hsla(0, 0%, 0%, 0.22) 52.9%,     hsla(0, 0%, 0%, 0.259) 58.8%,     hsla(0, 0%, 0%, 0.296) 64.7%,     hsla(0, 0%, 0%, 0.33) 71%,     hsla(0, 0%, 0%, 0.358) 77.5%,     hsla(0, 0%, 0%, 0.381) 84.5%,     hsla(0, 0%, 0%, 0.395) 91.9%,     hsla(0, 0%, 0%, 0.4) 100%   );',
+      'hero-overlay':
+        'linear-gradient(     to bottom,     hsla(0, 0%, 0%, 0) 0%,     hsla(0, 0%, 0%, 0.005) 8.1%,     hsla(0, 0%, 0%, 0.019) 15.5%,     hsla(0, 0%, 0%, 0.042) 22.5%,     hsla(0, 0%, 0%, 0.07) 29%,     hsla(0, 0%, 0%, 0.104) 35.3%,     hsla(0, 0%, 0%, 0.141) 41.2%,     hsla(0, 0%, 0%, 0.18) 47.1%,     hsla(0, 0%, 0%, 0.22) 52.9%,     hsla(0, 0%, 0%, 0.259) 58.8%,     hsla(0, 0%, 0%, 0.296) 64.7%,     hsla(0, 0%, 0%, 0.33) 71%,     hsla(0, 0%, 0%, 0.358) 77.5%,     hsla(0, 0%, 0%, 0.381) 84.5%,     hsla(0, 0%, 0%, 0.395) 91.9%,     hsla(0, 0%, 0%, 0.4) 100%   );',
+      'hero-overlay-top':
+        'linear-gradient(     to top,     hsla(0, 0%, 0%, 0) 0%,     hsla(0, 0%, 0%, 0.005) 8.1%,     hsla(0, 0%, 0%, 0.019) 15.5%,     hsla(0, 0%, 0%, 0.042) 22.5%,     hsla(0, 0%, 0%, 0.07) 29%,     hsla(0, 0%, 0%, 0.104) 35.3%,     hsla(0, 0%, 0%, 0.141) 41.2%,     hsla(0, 0%, 0%, 0.18) 47.1%,     hsla(0, 0%, 0%, 0.22) 52.9%,     hsla(0, 0%, 0%, 0.259) 58.8%,     hsla(0, 0%, 0%, 0.296) 64.7%,     hsla(0, 0%, 0%, 0.33) 71%,     hsla(0, 0%, 0%, 0.358) 77.5%,     hsla(0, 0%, 0%, 0.381) 84.5%,     hsla(0, 0%, 0%, 0.395) 91.9%,     hsla(0, 0%, 0%, 0.4) 100%   );',
       'trial-feature-line':
         'linear-gradient(180deg, #333333 0%, rgba(51, 51, 51, 0.994477) 8.07%, rgba(51, 51, 51, 0.978216) 15.54%, rgba(51, 51, 51, 0.95168) 22.5%, rgba(51, 51, 51, 0.91533) 29.04%, rgba(51, 51, 51, 0.86963) 35.26%, rgba(51, 51, 51, 0.81504) 41.25%, rgba(51, 51, 51, 0.752024) 47.1%, rgba(51, 51, 51, 0.681043) 52.9%, rgba(51, 51, 51, 0.60256) 58.75%, rgba(51, 51, 51, 0.517037) 64.74%, rgba(51, 51, 51, 0.424936) 70.96%, rgba(51, 51, 51, 0.32672) 77.5%, rgba(51, 51, 51, 0.22285) 84.46%, rgba(51, 51, 51, 0.11379) 91.93%, rgba(51, 51, 51, 0) 100%)',
       'gradient-hero-enabled':
@@ -232,7 +235,7 @@ module.exports = {
       'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
       'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
     },
-    backgroundOpacity: (theme) => theme('opacity'),
+    backgroundOpacity: theme => theme('opacity'),
     backgroundPosition: {
       bottom: 'bottom',
       center: 'center',
@@ -249,11 +252,11 @@ module.exports = {
       cover: 'cover',
       contain: 'contain',
     },
-    borderColor: (theme) => ({
+    borderColor: theme => ({
       ...theme('colors'),
       DEFAULT: theme('colors.gray.200', 'currentColor'),
     }),
-    borderOpacity: (theme) => theme('opacity'),
+    borderOpacity: theme => theme('opacity'),
     borderRadius: {
       none: '0px',
       sm: '2px',
@@ -262,7 +265,7 @@ module.exports = {
       lg: '8px',
       xl: '12px',
       '2xl': '16px',
-      'chip': '20px',
+      chip: '20px',
       '2.5xl': '22px',
       '3xl': '24px',
       '4xl': '36px',
@@ -317,9 +320,9 @@ module.exports = {
       help: 'help',
       'not-allowed': 'not-allowed',
     },
-    divideColor: (theme) => theme('borderColor'),
-    divideOpacity: (theme) => theme('borderOpacity'),
-    divideWidth: (theme) => theme('borderWidth'),
+    divideColor: theme => theme('borderColor'),
+    divideOpacity: theme => theme('borderOpacity'),
+    divideWidth: theme => theme('borderWidth'),
     fill: { current: 'currentColor' },
     flex: {
       1: '1 1 0%',
@@ -408,8 +411,8 @@ module.exports = {
       extrabold: '800',
       black: '900',
     },
-    gap: (theme) => theme('spacing'),
-    gradientColorStops: (theme) => theme('colors'),
+    gap: theme => theme('spacing'),
+    gradientColorStops: theme => theme('colors'),
     gridAutoColumns: {
       auto: 'auto',
       min: 'min-content',
@@ -526,7 +529,7 @@ module.exports = {
       5: 'repeat(5, minmax(0, 1fr))',
       6: 'repeat(6, minmax(0, 1fr))',
     },
-    height: (theme) => ({
+    height: theme => ({
       auto: 'auto',
       ...theme('spacing'),
       '1/2': '50%',
@@ -635,7 +638,7 @@ module.exports = {
       8: '32px',
       9: '36px',
       10: '40px',
-      11: '52px'
+      11: '52px',
     },
     listStyleType: {
       none: 'none',
@@ -647,7 +650,7 @@ module.exports = {
       ...theme('spacing'),
       ...negative(theme('spacing')),
     }),
-    maxHeight: (theme) => ({
+    maxHeight: theme => ({
       ...theme('spacing'),
       full: '100%',
       screen: '100vh',
@@ -695,7 +698,7 @@ module.exports = {
       full: '100%',
       screen: 'calc(100vh - 72px)',
     },
-    minWidth: (theme) => ({
+    minWidth: theme => ({
       0: '0px',
       full: '100%',
       min: 'min-content',
@@ -753,14 +756,14 @@ module.exports = {
       black: ['2px dotted black', '2px'],
       blue: ['2px solid #0084FF', '2px'],
     },
-    padding: (theme) => theme('spacing'),
-    placeholderColor: (theme) => theme('colors'),
-    placeholderOpacity: (theme) => theme('opacity'),
-    ringColor: (theme) => ({
+    padding: theme => theme('spacing'),
+    placeholderColor: theme => theme('colors'),
+    placeholderOpacity: theme => theme('opacity'),
+    ringColor: theme => ({
       DEFAULT: theme('colors.blue.500', '#3b82f6'),
       ...theme('colors'),
     }),
-    ringOffsetColor: (theme) => theme('colors'),
+    ringOffsetColor: theme => theme('colors'),
     ringOffsetWidth: {
       0: '0px',
       1: '1px',
@@ -768,7 +771,7 @@ module.exports = {
       4: '4px',
       8: '8px',
     },
-    ringOpacity: (theme) => ({
+    ringOpacity: theme => ({
       DEFAULT: '0.5',
       ...theme('opacity'),
     }),
@@ -836,8 +839,8 @@ module.exports = {
       1: '1',
       2: '2',
     },
-    textColor: (theme) => theme('colors'),
-    textOpacity: (theme) => theme('opacity'),
+    textColor: theme => theme('colors'),
+    textOpacity: theme => theme('opacity'),
     transformOrigin: {
       center: 'center',
       top: 'top',
@@ -909,7 +912,7 @@ module.exports = {
       '-3/4': '-75%',
       '-full': '-100%',
     }),
-    width: (theme) => ({
+    width: theme => ({
       auto: 'auto',
       ...theme('spacing'),
       '1/2': '50%',
@@ -971,4 +974,4 @@ module.exports = {
     'disabled',
   ],
   plugins: [require('@tailwindcss/line-clamp')],
-}
+};

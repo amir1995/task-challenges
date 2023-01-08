@@ -1,5 +1,5 @@
-import {SSRConfig} from "next-i18next";
+import { SSRConfig } from 'next-i18next';
 
 export interface ISetupLocale extends SSRConfig {
-  locale: string
+  locale: string;
 }

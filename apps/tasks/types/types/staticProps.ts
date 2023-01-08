@@ -1,3 +1,3 @@
-export type Locale = {
-  locale: string | undefined
-}
+export type TLocale = {
+  locale: string | undefined;
+};

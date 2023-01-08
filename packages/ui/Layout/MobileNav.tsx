@@ -1,19 +1,16 @@
-import classNames from "classnames"
-import {useRouter} from "next/router"
-import React from 'react'
+import classNames from 'classnames';
+import { useRouter } from 'next/router';
+import React from 'react';
 
-import LanguageSwitcher from "./LanguageSwitcher";
+import LanguageSwitcher from './LanguageSwitcher';
 
 type MobileNav = {
-  openMenu: boolean
-  setOpenMenu: (v: boolean) => void
-}
+  openMenu: boolean;
+  setOpenMenu: (v: boolean) => void;
+};
 
 const MobileNav = (props: MobileNav) => {
-  const {
-    openMenu,
-    setOpenMenu,
-  } = props;
+  const { openMenu, setOpenMenu } = props;
   const router = useRouter();
   const locale: string = router?.locale || 'fa';
 
@@ -22,33 +19,33 @@ const MobileNav = (props: MobileNav) => {
       role="navigation"
       className={`${
         openMenu ? 'visible' : 'invisible'
-      } block md:hidden fixed ease inset-0 w-full min-h-screen z-999`}
+      } ease z-999 fixed inset-0 block min-h-screen w-full md:hidden`}
     >
       <button
         onClick={() => setOpenMenu(false)}
-        className="w-full h-full bg-black bg-opacity-60 outline-none shadow-none border-none"
+        className="h-full w-full border-none bg-black bg-opacity-60 shadow-none outline-none"
       />
       <div
         className={classNames(
-          'w-64 xzs:w-75 xxs:w-83 xs:w-89 h-full ease duration-200 bg-neutral-100 overflow-hidden z-10 absolute top-0',
+          'xzs:w-75 xxs:w-83 xs:w-89 ease absolute top-0 z-10 h-full w-64 overflow-hidden bg-neutral-100 duration-200',
           {
-            "left-0": locale !== "fa" && openMenu,
-            "-left-full": locale !== "fa" && !openMenu,
-            'right-0': locale === "fa" && openMenu,
-            "-right-full": locale === "fa" && !openMenu,
-          })
-        }
+            'left-0': locale !== 'fa' && openMenu,
+            '-left-full': locale !== 'fa' && !openMenu,
+            'right-0': locale === 'fa' && openMenu,
+            '-right-full': locale === 'fa' && !openMenu,
+          },
+        )}
       >
         <LanguageSwitcher fromMobileNav />
         <div
           onClick={() => setOpenMenu(false)}
-          className="py-3.5 px-4 h-18 hover:bg-neutral-090 hover:shadow-gradient-hover active:shadow-gradient-pressed duration-200"
+          className="h-18 hover:bg-neutral-090 hover:shadow-gradient-hover active:shadow-gradient-pressed py-3.5 px-4 duration-200"
         >
           <span className="text-3.5xl">Home</span>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MobileNav
+export default MobileNav;

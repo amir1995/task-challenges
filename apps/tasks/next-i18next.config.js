@@ -7,5 +7,5 @@ module.exports = {
   fallbackLng: {
     default: ['fa'],
   },
-  defaultNS: 'fa'
-}
+  defaultNS: 'fa',
+};

@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 type ChevronProps = {
-  dir?: 'up' | 'down' | 'left' | 'right'
-}
+  dir?: 'up' | 'down' | 'left' | 'right';
+};
 
 const Chevron: React.FC<ChevronProps> = ({ dir = 'right' }) => {
   const rotations = {
@@ -10,7 +10,7 @@ const Chevron: React.FC<ChevronProps> = ({ dir = 'right' }) => {
     down: 'rotate(90deg)',
     left: 'rotate(180deg)',
     right: 'rotate(0deg)',
-  }
+  };
   return (
     <svg
       style={{ transform: rotations[dir] }}
@@ -27,7 +27,7 @@ const Chevron: React.FC<ChevronProps> = ({ dir = 'right' }) => {
         fill="#E2E2E2"
       />
     </svg>
-  )
-}
+  );
+};
 
-export default Chevron
+export default Chevron;
