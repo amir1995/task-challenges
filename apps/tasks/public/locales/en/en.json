@@ -3,5 +3,8 @@
   "home": "Home",
   "coinsList": "Coins List",
   "coins": "Coins",
-  "marketsCoin": "Markets Coin"
+  "marketsCoin": "Markets Coin",
+  "next": "Next",
+  "previous": "Previous",
+  "show": "Show"
 }

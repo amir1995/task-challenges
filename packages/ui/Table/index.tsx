@@ -1,3 +1,5 @@
+import {useRouter} from "next/router";
+import {useTranslation} from "next-i18next";
 import React, { useEffect } from 'react';
 import {
   TableInstance,
@@ -32,6 +34,8 @@ type TTable = {
 export const Table = (props: TTable) => {
   const { columns, title, setPage, setPerPage, isLoading, error, tableData, isSuccess, pageNum } =
     props;
+  const router = useRouter();
+  const { t } = useTranslation(router.locale);
 
   const {
     getTableProps,
@@ -125,8 +129,8 @@ export const Table = (props: TTable) => {
           </div>
           <div className="flex items-center justify-center py-3 pt-10 text-center">
             <div className="flex flex-1 justify-between">
-              <Button onClick={prevPageFunc}>Previous</Button>
-              <Button onClick={nextPageFunc}>Next</Button>
+              <Button onClick={prevPageFunc}>{t('previous')}</Button>
+              <Button onClick={nextPageFunc}>{t('next')}</Button>
             </div>
             <select
               value={pageSize}
@@ -137,7 +141,7 @@ export const Table = (props: TTable) => {
             >
               {[10, 20, 30, 40, 50, 100].map(pageSize => (
                 <option key={pageSize} value={pageSize}>
-                  Show {pageSize}
+                  {t('show')} {pageSize}
                 </option>
               ))}
             </select>

@@ -22,11 +22,7 @@ const Index: NextPage = () => {
   const { isLoading, data } = useQuery(['coinList'], () => coinList());
   const dataMarkets = useQuery(
     ['marketsCoinList', page, perPage],
-    () => marketsCoinList({ page: page + 1, perPage }),
-    {
-      keepPreviousData: true,
-      staleTime: Infinity,
-    },
+    () => marketsCoinList({ page: page + 1, perPage })
   );
 
   const columns = useMemo(() => marketsCoinColumns, []);

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import useOnClickOutside from 'hooks/useOnClickOutside';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import Chevron from '../Icons/Chevron';
 
@@ -50,6 +50,10 @@ const LanguageSwitcher = (props: LanguageSwitcherProps) => {
     },
     [switchToLocale],
   );
+
+  useEffect(() => {
+    document.body.dir = router.locale === 'fa' ? 'rtl' : 'ltr';
+  }, [router.locale])
 
   return (
     <div
