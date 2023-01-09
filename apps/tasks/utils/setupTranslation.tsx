@@ -5,9 +5,9 @@ import { TLocale } from '@/types/types/staticProps';
 
 export const setupTranslation = async (props: TLocale): Promise<ISetupLocale> => {
   const { locale } = props;
-
+  const lang = locale?.length ? locale : 'fa';
   return {
-    ...(await serverSideTranslations(locale ?? 'fa', [locale ?? 'fa'])),
-    locale: locale ?? 'fa',
+    ...(await serverSideTranslations(lang, [lang])),
+    locale: lang,
   };
 };

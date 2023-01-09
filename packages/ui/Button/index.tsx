@@ -1,14 +1,15 @@
 import classNames from 'classnames';
-import React, { HTMLAttributes } from 'react';
+import React from 'react';
 
-interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
+interface IButtonProps {
   children: React.ReactNode;
   className: string;
-  disabled?: boolean
+  disabled?: boolean;
+  onClick?: () => void
 }
 
 export function Button(props: IButtonProps) {
-  const { children, className, ...rest } = props;
+  const { children, className, onClick, disabled, ...rest } = props;
   return (
     <button
       type="button"
@@ -16,6 +17,7 @@ export function Button(props: IButtonProps) {
         'relative inline-flex items-center justify-center rounded-xl bg-neutral-200 px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-300 active:bg-neutral-400',
         className,
       )}
+      onClick={onClick}
       {...rest}
     >
       {children}
@@ -25,4 +27,6 @@ export function Button(props: IButtonProps) {
 
 Button.defaultProps = {
   className: '',
+  disabled: false,
+  onClick: () => {}
 };
