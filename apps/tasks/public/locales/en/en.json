@@ -1,5 +1,7 @@
 {
   "h1": "A simple example",
   "home": "Home",
-  "coinsList": "Coins List"
+  "coinsList": "Coins List",
+  "coins": "Coins",
+  "marketsCoin": "Markets Coin"
 }

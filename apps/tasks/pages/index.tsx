@@ -1,18 +1,36 @@
 import { useQuery } from '@tanstack/react-query';
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import { Card, CoinCard, Title } from 'ui';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
+import { useMemo, useState } from 'react';
+import { Card, CoinCard, Loader, Table, Title } from 'ui';
 import { Layout } from 'ui/Layout';
 import LayoutContainer from 'ui/Layout/LayoutContainer';
 
+import { marketsCoinColumns } from '@/constant/marketsCoinColumns';
 import { coinList } from '@/services/getCoinList';
-import { ISetupLocale } from '@/types/interface/functionResult';
+import { marketsCoinList } from '@/services/getMarketsCoinList';
 import { setupTranslation } from '@/utils/setupTranslation';
 
-interface IPageProps extends ISetupLocale {}
+const Index: NextPage = () => {
+  const router = useRouter();
+  const [page, setPage] = useState(0);
+  const [perPage, setPerPage] = useState(10);
+  const { t } = useTranslation(router.locale);
 
-const Index: NextPage<IPageProps> = (props: IPageProps) => {
-  const { data } = useQuery(['coinList'], () => coinList());
+  const { isLoading, data } = useQuery(['coinList'], () => coinList());
+  const dataMarkets = useQuery(
+    ['marketsCoinList', page, perPage],
+    () => marketsCoinList({ page: page + 1, perPage }),
+    {
+      keepPreviousData: true,
+      staleTime: Infinity,
+    },
+  );
+
+  const columns = useMemo(() => marketsCoinColumns, []);
+  const tableData = useMemo(() => dataMarkets.data, [dataMarkets?.data]);
 
   return (
     <Layout>
@@ -20,16 +38,33 @@ const Index: NextPage<IPageProps> = (props: IPageProps) => {
         <title>Coin Market</title>
       </Head>
       <LayoutContainer>
-        <Card className="">
-          <Title title="Coins" titleSize="text-2.5xl" />
-          <div className="align-center flex flex-wrap justify-start pt-4">
-            {data && data.length
-              ? data.map(p => {
-                  return <CoinCard coinName={p.toUpperCase()} />;
-                })
-              : null}
-          </div>
+        <Card>
+          <Title title={t('coins')} titleSize="text-2.5xl" />
+          {isLoading ? (
+            <div className="align-center flex justify-center pt-4">
+              <Loader />
+            </div>
+          ) : (
+            <div className="align-center flex flex-wrap justify-start pt-4">
+              {data && data.length
+                ? data.map(p => {
+                    return <CoinCard coinName={p.toUpperCase()} />;
+                  })
+                : null}
+            </div>
+          )}
         </Card>
+        <Table
+          columns={columns}
+          title={t('marketsCoin')}
+          tableData={tableData?.length ? tableData : []}
+          setPage={setPage}
+          setPerPage={setPerPage}
+          isSuccess={dataMarkets.isSuccess}
+          isLoading={dataMarkets.isLoading}
+          error={dataMarkets.error}
+          pageNum={page}
+        />
       </LayoutContainer>
     </Layout>
   );

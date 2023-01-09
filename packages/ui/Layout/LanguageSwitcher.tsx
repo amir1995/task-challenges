@@ -46,6 +46,7 @@ const LanguageSwitcher = (props: LanguageSwitcherProps) => {
       const locale = option.value;
       await switchToLocale(locale);
       document.body.dir = locale === 'fa' ? 'rtl' : 'ltr';
+      setShowMenu(false);
     },
     [switchToLocale],
   );

@@ -6,4 +6,12 @@ module.exports = {
   trailingSlash: true,
   reactStrictMode: true,
   transpilePackages: ['ui'],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'assets.coingecko.com',
+      },
+    ],
+  },
 };

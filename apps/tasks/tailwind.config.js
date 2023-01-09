@@ -205,6 +205,8 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      bounce200: 'bounce 1s infinite 200ms',
+      bounce400: 'bounce 1s infinite 400ms',
     },
     backgroundColor: theme => theme('colors'),
     backgroundImage: {
@@ -657,6 +659,7 @@ module.exports = {
     }),
     maxWidth: (theme, { breakpoints }) => ({
       none: 'none',
+      40: '40px',
       0: '0rem',
       xs: '320px',
       sm: '384px',

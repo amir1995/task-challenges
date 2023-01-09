@@ -67,6 +67,21 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@lineup-lite/components@~1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@lineup-lite/components/-/components-1.7.0.tgz#46520cd6db3de75817a537ec652493ba9d2ebe92"
+  integrity sha512-Mrsd4oj75Ozjt6QCQ4iERCJP4ZzTcV70g52jiVctT3zqENRmpqnkydxXvAvjUUdamOM4GJ+J9NJNtspBJw5x4w==
+  dependencies:
+    "@sgratzl/boxplots" "^1.3.0"
+
+"@lineup-lite/hooks@1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@lineup-lite/hooks/-/hooks-1.7.0.tgz#f9c0429abf0b19bec174d48fb29f8adfeb50e061"
+  integrity sha512-b+7Lw1PXife7WT9Kqiomn57jKOrymsSHJ+yzg9QTPBGgrMXE6H/I8IWQY/UzXCld/APES//wjGXeaLhwul0ezA==
+  dependencies:
+    "@lineup-lite/components" "~1.7.0"
+    date-fns "^2.28.0"
+
 "@next/env@13.1.1":
   version "13.1.1"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.1.1.tgz#6ff26488dc7674ef2bfdd1ca28fe43eed1113bea"
@@ -169,6 +184,11 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"
   integrity sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==
+
+"@sgratzl/boxplots@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@sgratzl/boxplots/-/boxplots-1.3.0.tgz#c9063d98e33a15f880cf4bd3531be71497e2a94e"
+  integrity sha512-2BRWv+WOH58pwzSgP50buoXgxQic+4auz3BF0wiIUXS8D3QGkdBNgsNdQO1754Tm/0uEwly0R3WaCiGnoYWcmA==
 
 "@swc/helpers@0.4.14":
   version "0.4.14"
@@ -329,6 +349,13 @@
   version "18.0.6"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.0.6.tgz#36652900024842b74607a17786b6662dd1e103a1"
   integrity sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-table@7.7.14":
+  version "7.7.14"
+  resolved "https://registry.yarnpkg.com/@types/react-table/-/react-table-7.7.14.tgz#b880f1ae140ed065bca2e21b3008ca1ebe71595a"
+  integrity sha512-TYrv7onCiakaG1uAu/UpQ9FojNEt/4/ht87EgJQaEGFoWV606ZLWUZAcUHzMxgc3v1mywP1cDyz3qB4ho3hWOw==
   dependencies:
     "@types/react" "*"
 
@@ -848,6 +875,11 @@ damerau-levenshtein@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
   integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
+
+date-fns@^2.28.0:
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.29.3.tgz#27402d2fc67eb442b511b70bbdf98e6411cd68a8"
+  integrity sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==
 
 debug@^2.6.9:
   version "2.6.9"
@@ -2436,10 +2468,20 @@ react-i18next@12.1.1:
     "@babel/runtime" "^7.14.5"
     html-parse-stringify "^3.0.1"
 
+react-icons@4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.7.1.tgz#0f4b25a5694e6972677cb189d2a72eabea7a8345"
+  integrity sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==
+
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-table@7.8.0:
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/react-table/-/react-table-7.8.0.tgz#07858c01c1718c09f7f1aed7034fcfd7bda907d2"
+  integrity sha512-hNaz4ygkZO4bESeFfnfOft73iBUj8K5oKi1EcSHPAibEydfsX2MyU6Z8KCr3mv3C9Kqqh71U+DhZkFvibbnPbA==
 
 react@18.2.0:
   version "18.2.0"
