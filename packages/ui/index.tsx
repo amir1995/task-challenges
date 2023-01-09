@@ -4,6 +4,5 @@ export { CoinCard } from './CoinComponents/CoinCard';
 export { Title } from './Title';
 export { Loader } from './Loader';
 export { Button } from './Button';
-export { PaginationButton } from './PaginationButton';
 export { Table } from './Table';
 export { CoinCell } from './CoinComponents/CoinCell';
